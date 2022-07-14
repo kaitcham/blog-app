@@ -1,14 +1,15 @@
-<h1>Here are details of a user post</h1>
-
 <div class="posts">
     <div class="post_comments">
         <h4><%=@post.title%> by: <%=@post.author.name%></h4>
-        <span>Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></span>
+        <p>
+            <span>Comments: <%= @post.comments_counter ? @post.comments_counter : 0 %>
+            </span><span>Likes: <%= @post.likes_counter ? @post.likes_counter : 0 %></span>
+        </p>
     </div>
     <p><%=@post.text%></p>
 </div>
 
-<div class= "comments">
+<div class="comments">
     <% @post.comments.each do |comment| %>
         <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>

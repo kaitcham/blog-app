@@ -3,3 +3,5 @@
 <% @users.each do |user| %>
     <%= render user %>
 <% end %>
+
+<button><%= link_to "Add Post", new_user_post_path(@current_user) %></button>

@@ -18,11 +18,11 @@ RSpec.describe 'Testing that user index page', type: :feature do
   end
 
   it 'Show the post title' do
-    expect(page).to have_content @post.title.to_s
+    expect(page).to have_content @post.title
   end
 
   it 'Show the author name' do
-    expect(page).to have_content @user.name.to_s
+    expect(page).to have_content @user.name
   end
 
   it 'Show how many comments a post has.' do

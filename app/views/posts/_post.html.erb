@@ -5,10 +5,10 @@
   <p><%=post.text%></p>
   <p>
     <span>
-    <%= link_to "Comments:", new_user_post_comment_path(@current_user, post) %> <%= post.comments_counter ? post.comments_counter : 0 %>
+    <%= link_to "Comments:", new_user_post_comment_path(@user, post) %> <%= post.comments_counter ? post.comments_counter : 0 %>
     </span>
     <span>
-      <%= form_with model: @like, url: user_post_likes_path(@current_user, post), method: :post, class: 'form' do |f|%>
+      <%= form_with model: @like, url: user_post_likes_path(@user, post), method: :post, class: 'form' do |f|%>
         <%= f.submit "Add Like"%>
 	      <%= post.likes_counter ? post.likes_counter : 0 %>
       <% end %>

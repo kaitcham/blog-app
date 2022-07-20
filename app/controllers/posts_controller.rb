@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   def index
-    @current_user = ApplicationController.new.current_user
     @user = User.find(params[:user_id])
     @post = Post.where(author_id: @user.id).order(created_at: :desc)
   end
@@ -11,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @current_user = ApplicationController.new.current_user
+    @user = current_user
     @post = Post.new
   end
 

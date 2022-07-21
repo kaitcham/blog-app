@@ -27,7 +27,7 @@ Enjoy!
 - [x] Milestone 6: Views
 - [x] Milestone 7: Forms
 - [x] Milestone 8: Integration specs for Views and fixing n+1 problems
-- [ ] Milestone 9: Add Devise
+- [x] Milestone 9: Add Devise for the app
 - [ ] Milestone 10: Add authorization rules
 - [ ] Milestone 11: Add API endpoints
 - [ ] Milestone 12: API documentation

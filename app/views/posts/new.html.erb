@@ -1,6 +1,6 @@
 <h1>Create a new post</h1>
 
-<%= form_with model: @post, url: user_posts_path(@current_user), method: :post, class: 'form' do |f|%>
+<%= form_with model: @post, url: user_posts_path(@user), method: :post, class: 'form' do |f|%>
     <div>
       <%= f.label :title, 'Enter post title' %><br>
       <%= f.text_field :title %>

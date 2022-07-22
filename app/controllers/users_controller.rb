@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def index
-    @current_user = ApplicationController.new.current_user
-    @users = User.all.order(updated_at: :desc)
+    redirect_to new_user_session_path if current_user.nil?
+    @user = current_user
+    @users = User.all
   end
 
   def show
-    @current_user = ApplicationController.new.current_user
     @user = User.find(params[:id])
     @posts = @user.last_three_posts
   end

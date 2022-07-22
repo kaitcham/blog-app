@@ -27,7 +27,7 @@ Enjoy!
 - [x] Milestone 6: Views
 - [x] Milestone 7: Forms
 - [x] Milestone 8: Integration specs for Views and fixing n+1 problems
-- [ ] Milestone 9: Add Devise
+- [x] Milestone 9: Add Devise for the app
 - [ ] Milestone 10: Add authorization rules
 - [ ] Milestone 11: Add API endpoints
 - [ ] Milestone 12: API documentation
@@ -40,15 +40,13 @@ To get a local copy up and running follow these simple example steps.
 
 In your terminal, navigate to your current directory and run this code
 
-`https://github.com/steveWDamesJr/blog-app.git`
+`git clone https://github.com/kaitcham/blog-app.git`
 
 Locate the directory in your file explorer
 
 `cd blog-app`
-
-### Install Rubocop
-
 `bundle install`
+change database credentials and run `rails db:reset`to migrate the database otherwise it will raise an error 
 
 ### Run the seeder
 
